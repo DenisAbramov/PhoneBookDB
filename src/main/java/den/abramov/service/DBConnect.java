@@ -21,7 +21,7 @@ public class DBConnect {
     public User getUserId(Integer id)  {
 
             Session session = sessionFactory.openSession();
-            User user = (User) session.load(User.class, id);
+            User user = (User) session.get(User.class, id);
             session.close();
             return user;
 
